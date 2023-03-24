@@ -18,6 +18,9 @@ html {
   --color-background: #ffffff;
   --color-background-hero: #2e2f42;
   --color-solid: #e7e9fc;
+  --color-solid-logo: #8E8F99;
+  --color-green: #31D0AA;
+
 }
 
 body {
@@ -66,20 +69,22 @@ img {
 
 .visually-hidden {
   position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
+
 /*-----------------------------Шапка сайту---------------------------------------------*/
-.page-header{
+.page-header {
   border-bottom: 1px solid var(--color-solid);
 }
+
 .logo {
   text-decoration: none;
   color: var(--color-IRIS);
@@ -91,7 +96,7 @@ img {
   font-size: 18px;
   line-height: 1.17;
   margin-right: 76px;
- 
+
 }
 
 .text-logo-header {
@@ -143,7 +148,7 @@ img {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
- 
+
 }
 
 .navigation-nav .link:hover,
@@ -164,7 +169,19 @@ img {
   padding-left: 40px;
 }
 
-/*---------------------------Секції---------------------------------------*/
+/*-----------------------------Герой------------------------------------------------*/
+.hero-fon {
+  height: 600px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/index/people-office1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
 
 .hero {
   text-align: center;
@@ -188,7 +205,7 @@ img {
 }
 
 .background-hero-title {
-  background-color: var(--color-background-hero);
+  background-color: var(--color-background-hero)
 }
 
 .hero-button {
@@ -211,6 +228,7 @@ img {
 
 .hero-button:hover {
   background-color: var(--color-OCEAN);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .box {
@@ -222,6 +240,9 @@ img {
 .box>.item+.item {
   margin-left: 24px;
 }
+
+/*---------------------------Секції---------------------------------------*/
+
 
 .button {
   font-family: "Roboto", sans-serif;
@@ -312,6 +333,7 @@ img {
   background-color: var(--color-OCEAN);
   color: var(--color-WHITE);
   border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .images {
@@ -329,10 +351,15 @@ img {
 .card-box>.card {
   flex-basis: calc((100% - 2*24px)/3);
   background-color: var(--color-WHITE);
+
+}
+
+.card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-text {
-  padding-left:16px;
+  padding-left: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
   border: 1px solid var(--color-solid);
@@ -351,18 +378,20 @@ img {
   list-style: none;
   display: flex;
   column-gap: 24px;
+
 }
 
 .card-box-photo>.card-photo {
   background-color: var(--color-WHITE);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100% - 2*24px)/4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 
 .card-text-photo {
   text-align: center;
-  padding: 32px;
+  padding: 8px;
 }
 
 /*------------------------------------картинки без тексту--------------------------------------------------*/
@@ -457,12 +486,90 @@ img {
 
 .text-paragraph {
   display: flex;
-
-
 }
 
 .text-paragraph .item {
   width: 264px;
+}
+
+.text-paragraph .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-Cloud);
+  border-radius: 4px;
+
+}
+/*--------------------------------------------strategy-----------------------------------*/
+.icon-strategy::before {
+  background-image: url(../images/SVG/antenna\ 1.svg);
+  padding: 24px 102.14px;
+}
+
+.icon-punctuality::before {
+  background-image: url(../images/SVG/clock\ 1.svg);
+  padding:24px 101.41px 24px 101.38px;
+}
+
+.icon-diligence::before {
+  background-image: url(../images/SVG/diagram\ 1.svg);
+  padding:31.5px 100px 31.42px
+}
+
+.icon-technologies::before {
+  background-image: url(../images/SVG/astronaut\ 1.svg);
+  padding:28.78px 113.87px 27.76px 100px;
+}
+
+/*----------------------------------------CЕКЦІЯ З ІКОНКАМИ--------------------------------------------*/
+.customers-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-NAVYBLU);
+  margin-bottom: 72px;
+}
+
+.customers-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  
+}
+
+.icon-logo {
+  display: flex;
+  gap: 24px;
+  background: var(--color-WHITE);
+  border: 1px solid var(--color-solid-logo);
+  border-radius: 4px;
+  padding: 16px 32px;
+
+}
+.icon-logo-link{
+ fill: var(--color-solid-logo)
+}
+.icon-logo-link:hover,
+.icon-logo-link:focus
+{ fill: var(--color-OCEAN);
+
+}
+.icon-logo:focus,
+.icon-logo:hover{
+border: 1px solid var(--color-OCEAN);
+
 }
 
 .text-paragraph .item+.item {
@@ -476,6 +583,38 @@ img {
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
+}
+
+/*------------------------------------------------ICON соіальні мережі-------------------------------*/
+.container-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  gap: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.team-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  Width: 40px;
+  height: 40px;
+  background-color: var(--color-IRIS);
+  border-radius: 50%;
+
+}
+
+.icon-link {
+  fill: var(--color-Cloud);
+}
+
+.icon-link:hover,
+.icon-link:focus,
+.team-icon:hover,
+.team-icon:focus {
+  background-color: var(--color-green)
 }
 
 /*----------------------------------------footer-----------------------------------------*/
@@ -496,9 +635,10 @@ img {
 }
 
 .text-logo-footer {
-  color: var(--color-Cloud);  
+  color: var(--color-Cloud);
 }
-.logo-footer{
+
+.logo-footer {
   text-decoration: none;
   color: var(--color-IRIS);
   font-family: "Raleway", sans-serif;
@@ -508,6 +648,26 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.social-text {
+  padding-bottom: 16px;
+  width: 500px;
+  color: var(--color-WHITE);
+}
+
+.icon-footer {
+  display: flex;
+}
+
+.social-item {
+  margin-left: 120px;
+}
+
+.container-icon-footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
 }
