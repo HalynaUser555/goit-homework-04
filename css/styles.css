@@ -60,7 +60,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
+ul{
+  padding: 0;
+}
 img {
   display: block;
   max-width: 100%;
@@ -83,6 +85,8 @@ img {
 /*-----------------------------Шапка сайту---------------------------------------------*/
 .page-header {
   border-bottom: 1px solid var(--color-solid);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 
 .logo {
@@ -171,7 +175,6 @@ img {
 
 /*-----------------------------Герой------------------------------------------------*/
 .hero-fon {
-  height: 600px;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
@@ -222,7 +225,6 @@ img {
   color: var(--color-WHITE);
   background-color: var(--color-IRIS);
   padding: 16px 32px;
-  display: inline-block;
   text-align: center;
 }
 
@@ -331,7 +333,8 @@ img {
 
 .card-text-photo {
   text-align: center;
-  padding: 8px;
+  padding:32px 0 ;
+
 }
 
 /*------------------------------------картинки без тексту--------------------------------------------------*/
@@ -445,22 +448,21 @@ img {
 /*--------------------------------------------strategy-----------------------------------*/
 .icon-strategy::before {
   background-image: url(../images/SVG/antenna\ 1.svg);
-  padding: 24px 102.14px;
+  
 }
 
 .icon-punctuality::before {
   background-image: url(../images/SVG/clock\ 1.svg);
-  padding:24px 101.41px 24px 101.38px;
+
 }
 
 .icon-diligence::before {
-  background-image: url(../images/SVG/diagram\ 1.svg);
-  padding:31.5px 100px 31.42px
-}
+  background-image: url(../images/SVG/diagram\ 1.svg);}
+ 
 
 .icon-technologies::before {
   background-image: url(../images/SVG/astronaut\ 1.svg);
-  padding:28.78px 113.87px 27.76px 100px;
+  
 }
 
 /*----------------------------------------CЕКЦІЯ З ІКОНКАМИ--------------------------------------------*/
@@ -489,8 +491,10 @@ img {
   
 }
 
-.icon-logo {
-  display: flex;
+
+.icon-logo-link{
+ fill: var(--color-solid-logo);
+ display: flex;
   gap: 24px;
   background: var(--color-WHITE);
   border: 1px solid var(--color-solid-logo);
@@ -498,19 +502,13 @@ img {
   padding: 16px 32px;
 
 }
-.icon-logo-link{
- fill: var(--color-solid-logo)
-}
 .icon-logo-link:hover,
 .icon-logo-link:focus
 { fill: var(--color-OCEAN);
-
+  border: 1px solid var(--color-OCEAN);
+  
 }
-.icon-logo:focus,
-.icon-logo:hover{
-border: 1px solid var(--color-OCEAN);
 
-}
 
 .text-paragraph .item+.item {
   margin-left: 24px;
@@ -523,16 +521,14 @@ border: 1px solid var(--color-OCEAN);
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 8px;
 }
 
 /*------------------------------------------------ICON соіальні мережі-------------------------------*/
 .container-icon {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
   gap: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .team-icon {
