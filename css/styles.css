@@ -170,11 +170,15 @@ img {
 }
 
 .navigation-nav .item+.item {
-  padding-left: 40px;
+ margin-left: 40px;
 }
 
 /*-----------------------------Герой------------------------------------------------*/
-.hero-fon {
+
+.hero {
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
@@ -183,13 +187,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--color-background-hero)
 
-}
-
-.hero {
-  text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -207,9 +206,6 @@ img {
 
 }
 
-.background-hero-title {
-  background-color: var(--color-background-hero)
-}
 
 .hero-button {
   font-family: "Roboto", sans-serif;
@@ -218,7 +214,6 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  cursor: var(--color-WHITE);
   border-radius: 4px;
   border: 1px solid transparent;
   cursor: pointer;
@@ -226,11 +221,11 @@ img {
   background-color: var(--color-IRIS);
   padding: 16px 32px;
   text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover {
   background-color: var(--color-OCEAN);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .box {
@@ -448,21 +443,21 @@ img {
 /*--------------------------------------------strategy-----------------------------------*/
 .icon-strategy::before {
   background-image: url(../images/SVG/antenna\ 1.svg);
-  
+  margin-bottom: 8px;
 }
 
 .icon-punctuality::before {
   background-image: url(../images/SVG/clock\ 1.svg);
-
+  margin-bottom: 8px;
 }
 
 .icon-diligence::before {
-  background-image: url(../images/SVG/diagram\ 1.svg);}
- 
-
+  background-image: url(../images/SVG/diagram\ 1.svg);
+  margin-bottom: 8px;
+}
 .icon-technologies::before {
   background-image: url(../images/SVG/astronaut\ 1.svg);
-  
+  margin-bottom: 8px;
 }
 
 /*----------------------------------------CЕКЦІЯ З ІКОНКАМИ--------------------------------------------*/
@@ -505,7 +500,7 @@ img {
 .icon-logo-link:hover,
 .icon-logo-link:focus
 { fill: var(--color-OCEAN);
-  border: 1px solid var(--color-OCEAN);
+  border-color:  var(--color-OCEAN);
   
 }
 
